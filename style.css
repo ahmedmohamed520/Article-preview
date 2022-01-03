@@ -1,0 +1,274 @@
+/* ## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.card {
+    display: flex;
+    width: 79rem;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+
+.card-img {
+    flex: 0 0 40%;
+    background-image: url("/images/drawers.jpg");
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+.card-content {
+    background-color: #fff;
+    border-radius: 0 10px 10px 0;
+}
+.whole-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0 10px 10px 0;
+    padding: 3rem 5rem;
+}
+.hover {
+    display: none;
+    align-items: center;
+    margin-right: auto;
+}
+.no-hover {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.card-title {
+    color: hsl(217, 19%, 35%);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+.card-text {
+    color: hsl(214, 17%, 51%);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+.card-author {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+.author-img {
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+.author-info {
+    margin-right: auto;
+}
+.author-name {
+    color: hsl(217, 19%, 35%);
+    font-size: 1.3rem;
+}
+.joining-date {
+    color: hsl(212, 23%, 69%);
+    font-size: 1.3rem;
+}
+.share {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 1000px;
+    background-color: hsl(210, 46%, 95%);
+    padding: 0.8rem;
+}
+.share-icon {
+}
+.social {
+    /* display: none; */
+
+    display: flex;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
+    padding: 1.2rem 1.8rem;
+    border-radius: 8px;
+
+    position: absolute;
+    top: -187%;
+    left: 67%;
+    box-shadow: 0 0.3rem 1rem hsl(212, 23%, 69%);
+
+    transition: 0.2s all ease-in-out;
+    visibility: visible;
+    opacity: 0;
+}
+.social::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    border: 1.2rem solid black;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    transform: translateX(-50%);
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 1.2rem;
+}
+
+.share-btn {
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: hsl(212, 23%, 69%);
+    margin-right: 2.6rem;
+}
+.share-inv {
+    background-color: hsl(214, 17%, 51%);
+    padding: 1rem;
+    border-radius: 50%;
+    /* display: flex;
+    align-items: center;
+    text-align: center; */
+
+    display: none;
+}
+
+@media screen and (max-width: 56.5em) {
+    html {
+        font-size: 56.25%;
+    }
+    .card {
+        width: 70rem;
+    }
+    .card-content {
+        padding: 2rem 3rem;
+    }
+}
+@media screen and (max-width: 40.625em) {
+    html {
+        font-size: 62.5%;
+    }
+    .card {
+        width: 80vw;
+        flex-direction: column;
+        height: auto;
+    }
+    .card-img {
+        /* flex: 0 0 100%; */
+        min-height: 40vh;
+        width: 100%;
+        background-image: url("/images/drawers.jpg");
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+    }
+    .card-content {
+        padding: 5rem 4rem 1rem;
+    }
+
+    .whole-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+        padding: 0;
+    }
+    .card-author {
+        /* display: none; */
+        background-color: hsl(217, 19%, 35%);
+        padding: 2rem 0;
+        padding: 2rem 4rem;
+        min-height: 8vh;
+        justify-content: flex-end;
+
+        position: relative;
+    }
+    .hover,
+    .no-hover {
+        position: absolute;
+        width: 100%;
+        min-height: 15rem;
+        left: 4rem;
+    }
+    .hover {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+    }
+    .no-hover {
+        display: none;
+        align-items: center;
+        margin-right: auto;
+    }
+    .share {
+        position: relative;
+        z-index: 20;
+        border-radius: 1000px;
+    }
+    .card-text {
+        font-size: 1.4rem;
+    }
+    .social {
+        display: none;
+    }
+    .social {
+        padding: 3rem 4rem;
+        border-radius: 10px;
+    }
+    .social-icons {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+    }
+    .social-icons a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-right: 2rem;
+    }
+
+    .share-btn {
+        text-decoration: none;
+        letter-spacing: 8px;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: hsl(212, 23%, 69%);
+        margin-right: 2.6rem;
+    }
+    .share-inv {
+        background-color: hsl(214, 17%, 51%);
+        padding: 1rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+}
