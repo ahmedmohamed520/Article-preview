@@ -38,7 +38,7 @@ body {
 
 .card-img {
     flex: 0 0 40%;
-    background-image: url("/images/drawers.jpg");
+    background-image: url("images/drawers.jpg");
     background-size: cover;
     border-radius: 10px 0 0 10px;
 }
